@@ -52,7 +52,7 @@ public class Televisao {
     }
 
     public void setMarca(String marca) {
-        //Regra de negócio / Validação -> Aqui...
+        //Regra de negócio / Validação -> Aqui..
         this.marca = marca;
     }
 

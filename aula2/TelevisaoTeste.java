@@ -28,7 +28,7 @@ public class TelevisaoTeste {
         //tv.getMarca() = Sony;
         tv.setMarca("Sony");
 
-        System.out.println("\n-----------------------------------------\n");
+        System.out.println("\n----------------------------------------\n");
 
 
         System.out.println("Marca: " + tv.getMarca());
