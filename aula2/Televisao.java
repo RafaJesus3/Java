@@ -14,6 +14,7 @@ public class Televisao {
     private int volume;
     private boolean ligado;
     private String marca;
+    private String cor;
 
     //Métodos de acesso e modificadores - getters() e setters()
 
@@ -21,12 +22,20 @@ public class Televisao {
         return canal;
     }
 
-    public void setCanal(int volume) {
-        //Regra de negócio / Validação -> Aqui...
-        this.canal = canal;
+    public void setCanal(int canal) {
+        if(ligado){
+            if (canal >= 0 && canal <= 500){
+                this.canal = canal;
+                System.out.println("Canal alterado para " + this.canal);
 
+            }else{
+                System.out.println("[Erro]: Canal inválido!");
+            }
+        }else{
+            System.out.println("[AVISO]: A TV está desligada!");
+        }
 
-    }
+        }
 
     public int getVolume() {
         return volume;
@@ -41,6 +50,9 @@ public class Televisao {
         return ligado;
     }
 
+
+
+
     public void setLigado(boolean ligado) {
         //Regra de negócio / Validação -> Aqui...
         this.ligado = ligado;
@@ -54,6 +66,26 @@ public class Televisao {
     public void setMarca(String marca) {
         //Regra de negócio / Validação -> Aqui..
         this.marca = marca;
+    }
+
+    public String getCor(){
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        //Regra de negócio / Validação -> Aqui...
+        this.cor = cor;
+    }
+
+
+    public void ligar(){
+        this.ligado = !this.ligado;
+        if (ligado){
+            System.out.println(">>> TV Ligada!");
+        }else{
+            System.out.println(">>> TV Desligada!");
+        }
+
     }
 
 }
